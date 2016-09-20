@@ -1,0 +1,17 @@
+<configuration>
+    <appender name="ROLLBAR" class="com.rollbar.logback.RollbarAppender">
+        <environment>testing</environment>
+        <endpoint>https://someCustomDomain.com/</endpoint>
+    </appender>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+    <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+    </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="ROLLBAR"/>
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>

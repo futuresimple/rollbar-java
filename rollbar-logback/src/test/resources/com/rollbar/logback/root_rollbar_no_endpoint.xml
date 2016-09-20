@@ -1,0 +1,10 @@
+<configuration>
+    <appender name="ROLLBAR" class="com.rollbar.logback.RollbarAppender">
+        <accessToken>e3a49f757f86465097c000cb2de9de08</accessToken>
+        <environment>testing</environment>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="ROLLBAR"/>
+    </root>
+</configuration>
