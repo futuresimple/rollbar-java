@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>rollbar-parent</artifactId>
+        <groupId>com.rollbar</groupId>
+        <version>dev</version>
+    </parent>
+
+    <name>rollbar-logback</name>
+    <description>A logback appender which reports errors to rollbar</description>
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>rollbar-logback</artifactId>
+    <version>${rollbar.version}</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.rollbar</groupId>
+            <artifactId>rollbar-payload</artifactId>
+            <version>${rollbar.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.rollbar</groupId>
+            <artifactId>rollbar-utilities</artifactId>
+            <version>${rollbar.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.rollbar</groupId>
+            <artifactId>rollbar-sender</artifactId>
+            <version>${rollbar.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.1.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>2.5.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>1.10.19</version>
+        </dependency>
+    </dependencies>
+</project>
